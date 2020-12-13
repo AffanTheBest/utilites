@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Simple Calculator</h1>
+        <div class="calculator">
+            <form class="calc" action="" name="calc">
+                <input type="text" readonly class="value" name="result" >
+                <span class="number clean" onclick="calc.result.value = ''">AC</span>
+                <span class="number" onclick="document.calc.result.value += '/'">/</span>
+                <span class="number" onclick="document.calc.result.value += '*'">*</span>
+                <span class="number" onclick="document.calc.result.value += '7'">7</span>
+                <span class="number" onclick="document.calc.result.value += '8'">8</span>
+                <span class="number" onclick="document.calc.result.value += '9'">9</span>
+                <span class="number" onclick="document.calc.result.value += '-'">-</span>
+                <span class="number" onclick="document.calc.result.value += '4'">4</span>
+                <span class="number" onclick="document.calc.result.value += '5'">5</span>
+                <span class="number" onclick="document.calc.result.value += '6'">6</span>
+                <span class="number plus" onclick="document.calc.result.value += '+'">+</span>
+                <span class="number" onclick="document.calc.result.value += '1'">1</span>
+                <span class="number" onclick="document.calc.result.value += '2'">2</span>
+                <span class="number" onclick="document.calc.result.value += '3'">3</span>
+                <span class="number" onclick="document.calc.result.value += '0'">0</span>
+                <span class="number" onclick="document.calc.result.value += '00'">00</span>
+                <span class="number" onclick="document.calc.result.value += '.'">.</span>
+                <span class="number equal" onclick="document.calc.result.value = eval(calc.result.value) ">=</span>
+            </form>
+        </div>
+        <h3>Made By <a href="">Affan</a></h3>
+    </div>
+
+    <script type="text/javascript" src="calc.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".calculator"), {
+		max: 15,
+		speed: 400
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".calculator"));
+</script>
+</body>
+</html>
