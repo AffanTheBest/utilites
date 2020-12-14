@@ -22,6 +22,6 @@ function calculate() {
     var percentage = (7.25 * average) + 11;
     console.log("the per is " + percentage);
 
-    document.getElementById("result").value = "Your Percentage is "+ percentage;
+    document.getElementById("result").value = "Your Percentage is "+ percentage + "%";
 
 }
