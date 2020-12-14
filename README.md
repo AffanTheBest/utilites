@@ -1,4 +1,6 @@
 # utilites
 Collection of simple utilities
-http://github.com - automatic!
-[GitHub](http://github.com)
+
+
+* [Simple Calculator](https://affanthebest.github.io/utilities/simple-calculator/)
+* [CGPA to Percentage Converter](https://affanthebest.github.io/utilities/CGPA-To-PERCENTAGE/)
