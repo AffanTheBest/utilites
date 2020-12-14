@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background:#2C3A47;
+    backdrop-filter: blur(20px);
+    background-image: url("https://svgshare.com/i/SHS.svg") , url("https://svgshare.com/i/SHF.svg");
+    background-repeat: no-repeat;
+    background-position:10% 20% , 90% 80%;
+    background-size: 40% 40%;
+}
+.center{
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter:blur(15px);
+    border-top:1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+}
+.center h2{
+    padding:8px;
+    text-align: center;
+    border-bottom: 1px solid linear-gradient(rgba(255,255,255, 0.05), rgb(44,58,71),rgba(255,255,255, 0.05) );
+    color: #F8EFBA;
+}
+.calculator{
+    border-radius:5px;
+    display: grid;
+    position: relative;
+    outline: none;
+    place-items: center;
+}
+.result{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #ffffff;
+    width: 400px;
+    height: 100px;
+    outline: none;
+    background:transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    outline: none;
+    grid-column: span 2;
+}
+.sem{
+    padding:10px 0;
+    margin: 0 10px; 
+}
+
+.label{
+    padding:5px;
+    margin:10px 1px;
+    color: rgb(201, 198, 218);
+    font-weight:400;
+    font-size: 20px;
+}
+.fas{
+    color: #CAD3C8;
+    padding:8px 5px;
+    font-size: 20px;
+
+}
+.sem_input{ 
+    margin-left:auto;
+    margin-right:auto;
+    background:transparent;
+    width: 150px;
+    height: 23px;
+    border: 1px solid rgba(255,255,255,0.1);
+    outline: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #c7cadb;
+    padding: 12px;
+    border-radius: 100px;
+    transition: 0.5s all;
+}
+.sem_input:active{
+    background:rgba(255,255,255, 0.4);
+}
+.calculate{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    outline: none;
+    border: none;
+}
+.calculate button{
+    outline: none;
+    padding: 5px 25px;
+    margin: 10px 0 15px 0 ;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+.calculate button:hover{
+    background: rgba(255, 255, 255, 0.8);
+    color: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px){
+    .result{
+        width: 350px;
+    }
+    .sem_input{
+        width: 130px;
+    }
+}
