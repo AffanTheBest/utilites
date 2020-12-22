@@ -9,15 +9,17 @@
     --maain-bg-light : rgb(255 , 255, 255);
 }
 
+body{
+    background: var(--main-bg-dark);
+}
 .main{
     width: 100vw;
-    height: 100vh;
+    height: 88vh;
     display: grid;
     place-items: center;
-    background: var(--main-bg-dark) ;
     position: relative;
 }
-.main:before{
+body:before{
     content:"";
     width: 100%;
     height: 100%;
