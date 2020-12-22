@@ -97,6 +97,18 @@ body:before{
     resize:none;
 }
 
+#magnet::-webkit-scrollbar{
+    width: 4px;
+}
+#magnet::-webkit-scrollbar-track{
+    background: #161049;
+}
+#magnet::-webkit-scrollbar-thumb{
+    background: rgb(93, 94, 165);
+}
+#magnet::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
 @media (max-width: 768px){
     .result{
         width: 88vw;
