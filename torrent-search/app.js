@@ -27,7 +27,10 @@ function find() {
 
         const copy = () =>{
             let magnet = document.getElementById('magnet'); 
-            magnet.select();
-            magnet.setSelectionRange(0, 99999);
-            document.execCommand('copy');
-        }
+        //     magnet.select();
+        //     magnet.setSelectionRange(0, 99999);
+        //     document.execCommand('copy');
+        navigator.clipboard.writeText(magnet.value).then(()=>{
+            swal("Success","Magnet URL copied to to clipboard!","success");
+        });
+    }
