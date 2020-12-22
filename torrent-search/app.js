@@ -13,20 +13,16 @@ function find() {
     magnet.disabled = true;
         let query = document.querySelector('#query').value;
         const api = fetch('https://api.sumanjay.cf/torrent/?query='+query).then((apidata) => {
-            console.log(apidata);    
             return apidata.json();
         }).then((actualdata) => {
-            console.log(actualdata);
-            
             query_name.textContent ="You searched for " + `${query}` ;
+            result.classList.replace('d-none','d-block');
             title.textContent = "Title : "+ actualdata[0].name;
             leechers.textContent = "Leechers : " + actualdata[0].leecher;
             seeders.textContent = "Seeders : " + actualdata[0].seeder;
             size.textContent = "Size  : " + actualdata[0].size;
             magnet.value = actualdata[0].magnet;
-            result.classList.replace('d-none','d-block');
         })
-
         };
 
         const copy = () =>{
