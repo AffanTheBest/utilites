@@ -19,10 +19,12 @@
                       <input id="query" type="text" class="form-control" placeholder="Enter Your Query">
                       <button id="submit" class="btn btn-primary" onclick="find()">Search</button>
                    </div> -->
+                   <form action="" class="form" id="form"></form>
                    <div class="input-group py-5 px-2 search_div">
-                    <input type="text" class="form-control shadow" id="query" placeholder="Enter Your Query">
-                    <button class="input-group-text btn btn-primary shadow" id="submit" onclick="find()">Search</button>
+                      <input type="search" class="form-control shadow" id="query" placeholder="Enter Your Query" onsearch="find()">
+                      <input type="submit" class="input-group-text btn btn-primary shadow" id="submit" value="Search" onclick="find()">
                   </div>
+                </form>
 
                    <div class="animation" id="loading"></div>
                 <div class="result mx-auto" id="result">
