@@ -19,8 +19,8 @@ function find() {
             console.log(actualdata);
             result.style.display = "block";
             if(actualdata[0] == undefined) {
-                result.style.display = "none";
                 swal("Sorry!","Sorry , we couldn't find torrent related to your query. \n Please try with some other query.","error");
+                result.style.display = "none";
             }else { 
                 query_name.textContent ="You searched for " + `'${query}'` ;
                 document.querySelector('#magnet1').disabled = true;
@@ -57,7 +57,7 @@ function find() {
                 document.querySelector('.res4').style.display = "none"
             }else{
                 document.querySelector('#magnet4').disabled = true;
-                document.querySelector('#title4').textContent = "Title : "+ actualdata[3].name;
+                document.querySelector('#title4').innerHTML = "Title : "+ actualdata[3].name;
                 document.querySelector('#leechers4').textContent = "Leechers : " + actualdata[3].leecher;
                 document.querySelector('#seeders4').textContent = "Seeders : " + actualdata[3].seeder;
                 document.querySelector('#size4').textContent = "Size  : " + actualdata[3].size;
@@ -91,26 +91,32 @@ function find() {
 
     function toLight() {
         isLight = true;
-        document.querySelector(".fas").style.animation = "rotateRight .2s linear";
-        document.querySelector(".fas").classList.replace("fa-sun","fa-star")
+        document.querySelector(".fa-sun").style.animation = "rotateRight .2s linear";
+        document.querySelector(".fa-sun").classList.replace("far","fas")
         document.body.style.background = "var(--main-bg-light)";
         document.body.style.color = "var(--text-light)";
         document.querySelector("#loading").style.borderLeft = "2px solid #000";
         document.querySelector(".center").style.background = "var(--center-bg-light)";
         document.querySelector("h1").classList.replace("text-white", "text-dark");
         document.querySelector("h2").classList.replace("text-white","text-dark");
+        document.querySelector("hr").style.background = "#000";
+        document.querySelector("#footer").style.background = "var(--main-bg-light)";
+        document.querySelector("#footer").style.color = "var(--text-light)";
     }
 
     function toDark(){
         isLight = false;
-        document.querySelector(".fas").style.animation = "rotateLeft .2s linear";
-        document.querySelector(".fas").classList.replace("fa-star","fa-sun")
+        document.querySelector(".fa-sun").style.animation = "rotateLeft .2s linear";
+        document.querySelector(".fa-sun").classList.replace("fas","far");
         document.body.style.background = "var(--main-bg-dark)";
         document.body.style.color = "var(--text-dark)";
         document.querySelector("#loading").style.borderLeft = "2px solid rgb(156, 169, 209)";
         document.querySelector(".center").style.background = "var(--center-bg-dark)";
         document.querySelector("h1").classList.replace("text-dark", "text-white");
         document.querySelector("h2").classList.replace("text-dark","text-white");
+        document.querySelector("hr").style.background = "#fff";
+        document.querySelector("#footer").style.background = "var(--main-bg-dark)";
+        document.querySelector("#footer").style.color = "var(--text-dark)";
     }
 
     function changeTheme(){
