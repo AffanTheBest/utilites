@@ -15,6 +15,8 @@ function find() {
         fetch('https://api.sumanjay.cf/torrent/?query='+query).then((apidata) => {
             return apidata.json();
         }).then((actualdata) => {
+            query.disabled = true;
+            query.disabled = false;
             result.style.display = "block";
             if(actualdata[0] == undefined) {
                 swal("Sorry!","Sorry , we couldn't find torrent related to your query. \n Please try with some other query.","error");
