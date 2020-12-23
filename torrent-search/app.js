@@ -1,5 +1,5 @@
 var input = document.getElementById('query');
-input.addEventListener("keypress", function(event) {
+input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
      event.preventDefault();
      document.querySelector("#submit").click();
