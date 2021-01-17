@@ -8,7 +8,7 @@ Collection of simple utilities
 ### Simple Calculator
 
 ```
-It is simple simple calculator made with HTML , CSS  & JavaScr.ipt with an awsome UI
+It is simple simple calculator made with HTML , CSS  & JavaScr.ipt with an awsome UI.
 ```
 
 -------------------------------------------------------
