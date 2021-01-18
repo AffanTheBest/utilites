@@ -12,7 +12,7 @@
     <div class="main">
         <div class="center">
             <h2>CGPA TO PERCENTAGE</h2>
-            <form method="POST" name="calculator" class="calculator">
+            <form action="javascript:calculate()" name="calculator" class="calculator" id="calculator">
                 <input type="text" readonly class="result" id="result" name="result" >
                 <span class="sem">
                     <label class="label" for="sem_input">SEM 1</label> <br>
@@ -54,10 +54,11 @@
                     <i class="fas fa-book"></i>
                     <input type="text" class="input sem_input" id="sem8" name="array" autocomplete="off">
                 </span>
+                <div class="calculate">
+                    <input type="submit" id='calculatePercentage' onclick="calculate()" value="Calculate">
+                </div>
             </form>
-            <div class="calculate">
-                <button onclick="calculate()">Calculate</button>
-            </div>
+            
         </div>
         <h3 class="cred"> Made by <u><a href="https://github.com/AffanTheBest/utilities/cgpa-to-percentage" target="_blank"> Affan</a></u></h3>
     </div>
