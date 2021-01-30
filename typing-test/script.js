@@ -6,12 +6,20 @@ const btn = document.getElementById('btn');
 let startTime , endTime ;
 
 function generateQuote() {
-    fetch('https://api.quotable.io/random')
+    fetch('https://type.fit/api/quotes')
     .then((response) =>  response.json())
     .then((actData) => {
+        console.log(actData);
         const playGame = () => {
             typedWords.focus();
-            message.innerText = actData.content;
+            let randomQuote =  Math.round(Math.random() * actData.length);
+            let randomQuote2 =  Math.round(Math.random() * actData.length);
+            // alert(actData[randomQuote].text.length + actData[randomQuote2].text.length);
+            if (actData[randomQuote].text.length <= 150) {
+                message.innerText = actData[randomQuote].text + " " + actData[randomQuote2].text;   
+            }else{
+                message.innerText = actData[randomQuote].text;
+            }
             typedWords.value = '';
             let date = new Date();
             startTime = date.getTime();
