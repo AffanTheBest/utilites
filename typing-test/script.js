@@ -9,7 +9,6 @@ function generateQuote() {
     fetch('https://api.quotable.io/random')
     .then((response) =>  response.json())
     .then((actData) => {
-        console.log(actData);
         const playGame = () => {
             message.innerText = actData.content;
             typedWords.value = '';
