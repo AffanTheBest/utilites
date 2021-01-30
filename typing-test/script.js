@@ -10,6 +10,7 @@ function generateQuote() {
     .then((response) =>  response.json())
     .then((actData) => {
         const playGame = () => {
+            typedWords.focus();
             message.innerText = actData.content;
             typedWords.value = '';
             let date = new Date();
