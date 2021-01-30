@@ -9,12 +9,10 @@ function generateQuote() {
     fetch('https://type.fit/api/quotes')
     .then((response) =>  response.json())
     .then((actData) => {
-        console.log(actData);
         const playGame = () => {
             typedWords.focus();
             let randomQuote =  Math.round(Math.random() * actData.length);
             let randomQuote2 =  Math.round(Math.random() * actData.length);
-            // alert(actData[randomQuote].text.length + actData[randomQuote2].text.length);
             if (actData[randomQuote].text.length <= 150) {
                 message.innerText = actData[randomQuote].text + " " + actData[randomQuote2].text;   
             }else{
@@ -35,7 +33,7 @@ function generateQuote() {
             let wordCount = wordCounter(totalString);
             let speed = Math.round((wordCount / totalTime) * 60);
 
-            let finalMessage =  "Nice You have typed " + wordCount + " words, at the speed of " + speed +"wpm .";
+            let finalMessage =  `Nice You have typed ${wordCount} words, at the speed of ${speed} wpm.`;
             finalMessage += compareWords(message.innerText, totalString);
             message.innerText = finalMessage;
         }
