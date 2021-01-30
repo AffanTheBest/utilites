@@ -10,6 +10,7 @@ document.querySelector('#calculator').addEventListener('keyup', function(event) 
 });
 
 function calculate() {
+    
     //Getting inputs from input and storing it into array.
     var inputs = document.getElementsByClassName("sem_input");
     var array = [];
@@ -29,6 +30,10 @@ function calculate() {
     // Finding percentage of given CGPA
     var percentage = (7.25 * average) + 11;
 
-    let = document.querySelector('#result');
-    result.value = "Your Percentage is "+ percentage.toFixed(2) + "%";
+    if(percentage == NaN|| percentage > 100) {
+        alert('Please enter correct CGPA');
+    }else{
+        let = document.querySelector('#result');
+        result.value = "Your Percentage is "+ percentage.toFixed(2) + "%";
+    }
 }
