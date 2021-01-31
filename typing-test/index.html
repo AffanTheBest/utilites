@@ -49,10 +49,14 @@
             width: 900px;
             height: 230px;
             resize: none;
+            outline: none;
         }
         textarea::placeholder{
             font-size: 25px;
             color: black;
+        }
+        textarea:focus{
+            box-shadow: 5px 5px 15px #9FA5CE;
         }
         @media (max-width: 768px) {
             textarea{
@@ -85,7 +89,7 @@
         <div class="center">
             <h1>Typing Speed Test</h1>
             <h2 id="message"></h2>
-            <textarea name="" id="mywords" placeholder="Be fast!"></textarea><br>
+            <textarea name="" id="mywords" placeholder="Be fast!" onpaste="return false"></textarea><br>
             <button class="mainbtn" id="btn">Start</button>
             <h3> Made with 💖 by Affan </h3>
         </div>
