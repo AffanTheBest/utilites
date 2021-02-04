@@ -5,6 +5,7 @@ Collection of simple utilities
 * [Simple Calculator](https://affanthebest.github.io/utilities/simple-calculator/)
 * [CGPA to Percentage Converter](https://affanthebest.github.io/utilities/CGPA-To-PERCENTAGE/)
 * [Typing Speed Test](https://affanthebest.github.io/utilities/typing-test/)
+* [Weather App](https://weatherapp.affanthebess.repl.co/)
 ### Simple Calculator
 
 ```
@@ -23,4 +24,9 @@ It is a simple webpage for Converting CGPA to into Percentage for MU University.
 ### Typing Speed Test
 ```
 A simple unique Ui for Testing Typing Speed
+```
+
+### Weather App
+```
+A simple & unique UI to get current temprature for a specific city.
 ```
