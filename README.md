@@ -11,7 +11,7 @@ Collection of simple utilities
 -------------------------------------------------------
 
 
-### 🖩 [Simple Calculator](https://affanthebest.github.io/utilities/simple-calculator/)
+### 🔢 [Simple Calculator](https://affanthebest.github.io/utilities/simple-calculator/)
 
 ```
 It is a simple calculator made with HTML , CSS  & JavaScript with an awsome UI.
@@ -27,7 +27,7 @@ It is a simple webpage for Converting CGPA to into Percentage for MU University.
 
 ### ⌨️ [Typing Speed Test](https://affanthebest.github.io/utilities/typing-test/)
 ```
-A simple unique Ui for Testing Typing Speed
+A simple unique Ui for Testing Typing Speed.
 ```
 
 
